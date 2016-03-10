@@ -8,14 +8,18 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/grid.css" media="screen">
+    <script type="text/javascript" src="jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="moment.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Petition-freiraum-berlin</h1>
-      <h2 class="project-tagline">Petition Freiräume in Berlin erhalten</h2>
-      <a href="https://github.com/fhackenberger/petition-freiraum-berlin" class="btn">View on GitHub</a>
-      <a href="https://github.com/fhackenberger/petition-freiraum-berlin/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/fhackenberger/petition-freiraum-berlin/tarball/master" class="btn">Download .tar.gz</a>
+      <h1 class="project-name">Petition Freiraum Berlin</h1>
+      <h2 class="project-tagline">Musterschreiben Bürgerbeteiligung</h2>
+<!--       <a href="https://github.com/fhackenberger/petition-freiraum-berlin" class="btn">View on GitHub</a> -->
+<!--       <a href="https://github.com/fhackenberger/petition-freiraum-berlin/zipball/master" class="btn">Download .zip</a> -->
+<!--       <a href="https://github.com/fhackenberger/petition-freiraum-berlin/tarball/master" class="btn">Download .tar.gz</a> -->
     </section>
 
     <section class="main-content">
@@ -28,7 +32,9 @@
 
 <p>Mithilfe dieser Seite könnt ihr ein <strong>personalisiertes Musterschreiben</strong> generieren, es dann noch händisch ergänzen und direkt per E-Mail abschicken. Das sollte nicht mehr als <strong>5 Minuten</strong> dauern!</p>
 
-<p>Die Einsendung kann per E-Mail an erfolgen. <strong>Bitte benutzt dafür folgenden Link</strong>: <a href="mailto:stadtplanung@lichtenberg.berlin.de?&amp;bcc=florian@hackenberger.at&amp;subject=Einwendung+Bebauungsplan+XVII-4">stadtplanung@lichtenberg.berlin.de</a> erfolgen. Ganz wichtig, per BCC an <a href="mailto:florian@hackenberger.at">florian@hackenberger.at</a>, der Link sollte das automatisch machen. Das ist wichtig, damit ich unsere Aktion koordinieren kann. Ich behandle eure E-Mails selbstverständlich komplett vertraulich.</p>
+<p>Die Einsendung kann per E-Mail an erfolgen. <strong>Bitte benutzt dafür folgenden Link</strong>:
+<a href="mailto:stadtplanung@lichtenberg.berlin.de?&amp;bcc=florian@hackenberger.at&amp;subject=Einwendung Bebauungsplan XVII-4">stadtplanung@lichtenberg.berlin.de</a>
+Ganz wichtig, per BCC an <a href="mailto:florian@hackenberger.at">florian@hackenberger.at</a>, der Link sollte das automatisch machen. Das ist wichtig, damit ich unsere Aktion koordinieren kann. Ich behandle eure E-Mails selbstverständlich komplett vertraulich.</p>
 
 <p>Wenn ihr es schafft zusätzlich <strong>ausdrucken und per Post</strong> an:</p>
 
@@ -43,21 +49,61 @@ Fachbereich Stadtplanung
 
 <p>Bei weiteren Fragen kontaktiert mich gerne unter <a href="mailto:florian@hackenberger.at">florian@hackenberger.at</a>.</p>
 
+<form>
+	<div class="grid">
+		<div class="grid__col grid__col--1-of-3">
+			<label>Vollständiger Name</label>
+		</div>
+		<div class="grid__col grid__col--2-of-3">
+			<input type="text" name="name"></input><br/>
+		</div>
+	</div>
+	<br/>
+	<div class="grid">
+		<div class="grid__col grid__col--1-of-3">
+			<label>Adresse mit Postleitzahl</label>
+		</div>
+		<div class="grid__col grid__col--2-of-3">
+			<input type="text" name="address"></input><br/>
+		</div>
+	</div>
+	<br/>
+	<div class="grid">
+		<div class="grid__col grid__col--1-of-3">
+			<label>Vom Bauvorhaben bin ich folgendermaßen betroffen:</label>
+		</div>
+		<div class="grid__col grid__col--1-of-3">
+			<textarea name="affected"></textarea><br/>
+		</div>
+		<div class="grid__col grid__col--1-of-3">
+			<small>z.B. Ich bin Anwohner, Ich nutze die Fläche regelmäßig mit dem Fahrrad, Ich verbringe dort oft meine Freizeit...</small>
+		</div>
+	</div>
+	<br/>
+	<button name="name" value="value" type="submit">Muster erstellen</button>
+	<strong class="form-error" style="display:none;"><br/>Bitte das Formular vollständig ausfüllen, sonst wird die Einwendung nicht akzeptiert!</strong>
+</form>
+
 <h3>
 <a id="pretemplate" class="anchor" href="#pretemplate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PRETEMPLATE</h3>
+<span><br/>Nun bitte den Text zwischen den Linien <strong>kopieren</strong> und folgenden <strong>Link anklicken</strong> um das E-Mail zu erstellen:
+<a href="mailto:stadtplanung@lichtenberg.berlin.de?&amp;bcc=florian@hackenberger.at&amp;subject=Einwendung Bebauungsplan XVII-4">stadtplanung@lichtenberg.berlin.de</a>
+Falls der Link nicht klappt, an stadtplanung@lichtenberg.berlin.de und in BCC an florian@hackenberger.at mit Betreff <em>Einwendung Bebauungsplan XVII-4</em> verschicken.
+<br/>Idealerweise auch <strong>ausdrucken und per Post</strong> an die Adresse weiter oben.</span>
+<hr>
 
-<p><strong>NAME</strong>
-<strong>ADDRESS</strong>
+<p><strong>NAME</strong><br/>
+<strong>ADDRESS</strong><br/>
 Datum: <strong>DATE</strong></p>
 
 <p>An:</p>
 
-<pre><code>Bezirksamt Lichtenberg von Berlin
-Abteilung Stadtentwicklung
-Stadtentwicklungsamt
-Fachbereich Stadtplanung
-10360 Berlin
-</code></pre>
+<p>
+Bezirksamt Lichtenberg von Berlin<br/>
+Abteilung Stadtentwicklung<br/>
+Stadtentwicklungsamt<br/>
+Fachbereich Stadtplanung<br/>
+10360 Berlin<br/></p>
 
 <p>Betreff: Stellungnahme zum Bebauungsplan XVII-4 Ostkreuz</p>
 
@@ -125,9 +171,11 @@ Fachbereich Stadtplanung
 <h3>
 <a id="posttemplate" class="anchor" href="#posttemplate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>POSTTEMPLATE</h3>
 
+<p>Ich erbitte eine Bestätigung des Empfanges meiner Einwendung. Vielen Dank!</p>
+
 <p>Mit freundlichen Grüßen,
 <strong>NAME</strong></p>
-
+<hr>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/fhackenberger/petition-freiraum-berlin">Petition-freiraum-berlin</a> is maintained by <a href="https://github.com/fhackenberger">fhackenberger</a>.</span>
 
